@@ -24,3 +24,17 @@ https://www.strathweb.com/2016/12/accessing-httpcontext-outside-of-framework-com
 
 Anúncio da MS indicando que o objeto para acessar o contexto Http não será mais injetado por padrão
 https://github.com/aspnet/Hosting/issues/793
+
+Microsoft Rest API GuideLine
+https://github.com/microsoft/api-guidelines
+
+Break Changes definition
+https://github.com/microsoft/api-guidelines/blob/vNext/Guidelines.md#123-definition-of-a-breaking-change
+
+Motivos para não versionar via HARDCODE no atributo Route
+	Permitir uma versão default caso o cliente não forneça a versão desejada
+	Permitir que determinado controlador suporte mais de uma versão
+	Suportar mais de um mecanismo de versionamento (que são no caminho da URL, via query string, media type e cabeçalho)
+	Indicar que determinada versão vai sair de suporte (o famoso deprecated)
+	Indicar que um endpoint é neutro, ou seja, suporta qualquer versão
+	Obter via código que versão foi solicitada
