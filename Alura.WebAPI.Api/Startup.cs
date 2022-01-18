@@ -58,13 +58,7 @@ namespace Alura.WebAPI.Api
                 };
             });
 
-            services.AddApiVersioning(options =>
-                {
-                    options.ApiVersionReader = ApiVersionReader.Combine(
-                            new QueryStringApiVersionReader("api-version"),
-                            new HeaderApiVersionReader("api-version")
-                        );
-                });
+            services.AddApiVersioning();
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
