@@ -38,3 +38,10 @@ Motivos para não versionar via HARDCODE no atributo Route
 	Indicar que determinada versão vai sair de suporte (o famoso deprecated)
 	Indicar que um endpoint é neutro, ou seja, suporta qualquer versão
 	Obter via código que versão foi solicitada
+
+Tópico sobre versionamento de APIs no Manual da Microsoft
+https://github.com/Microsoft/api-guidelines/blob/master/Guidelines.md#12-versioning
+
+Artigo de Scott Hanselman sobre o assunto https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx
+Repositório e documentação do pacote AspNet Api Versioning
+https://github.com/Microsoft/aspnet-api-versioning
