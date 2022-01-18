@@ -23,4 +23,13 @@ namespace Alura.WebAPI.Api.Modelos
         public string Anterior { get; set; }
         public string ProximaPagina { get; set; }
     }
+
+    public static class LivroPaginadoExtensions
+    {
+        public static LivroPaginado ToLivroPaginado(this IQueryable<LivroApi> query, LivroPaginacao paginacao)
+        {
+
+            return new LivroPaginado();
+        }
+    }
 }
