@@ -34,6 +34,7 @@ namespace Alura.ListaLeitura.Api.Controllers
                 .AplicaOrdem(ordem)
                 .Select(l => l.ToApi())
                 .ToLivroPaginado(paginacao);
+
             return Ok(livroPaginado);
         }
 
@@ -68,11 +69,13 @@ namespace Alura.ListaLeitura.Api.Controllers
             if (ModelState.IsValid)
             {
                 var livro = model.ToLivro();
+
                 _repo.Incluir(livro);
+
                 var uri = Url.Action("Recuperar", new { id = livro.Id });
                 return Created(uri, livro); //201
             }
-            return BadRequest();
+            return BadRequest(ErrorResponse.FromModelState(ModelState));
         }
 
         [HttpPut]

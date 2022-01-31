@@ -9,7 +9,7 @@ namespace Alura.WebAPI.Api.Modelos
 {
     public class LivroOrdem
     {
-        public string OrdernarPor { get; set; }
+        public string OrdernarPor { get; set; } = "id asc";
     }
 
     public static class LivroOrdemExtensions
